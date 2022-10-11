@@ -199,7 +199,7 @@
       console.log('classNames:', classNames);
       console.log('settings:', settings);
       console.log('templates:', templates);
-      thisApp.initData()
+      thisApp.initData();
       thisApp.initData();
       thisApp.initMenu();
     },
