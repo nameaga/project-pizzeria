@@ -221,7 +221,7 @@
       console.log('constructor arguments:', element);
 
       thisWidget.getElements(element);
-      thisWidget.setValue(thisWidget.input.value || settings.amountWidget.defaultValue );
+      thisWidget.setValue(settings.amountWidget.defaultValue);
       thisWidget.initActions();
     }
 
@@ -253,7 +253,7 @@
         thisWidget.value = maxValue;
       }
 
-      thisWidget.input.value = settings.amountWidget.defaultValue;
+      thisWidget.input.value = thisWidget.value;
       console.log(thisWidget.value);
       thisWidget.announce();
     }
