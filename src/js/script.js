@@ -70,7 +70,7 @@
     amountWidget: {
       defaultValue: 1,
       defaultMin: 1,
-      defaultMax: 9,
+      defaultMax: 10,
     }, // CODE CHANGED
     // CODE ADDED START
     cart: {
@@ -272,19 +272,11 @@
       const thisWidget = this;
 
       const newValue = parseInt(value);
-      const minValue = settings.amountWidget.defaultMin;
-      const maxValue = settings.amountWidget.defaultMax;
-      console.log('max value', maxValue);
+      //console.log('max value', maxValue);
 
       /* TODO: Add validation */
-      if(thisWidget.value !== newValue && !isNaN(newValue)) {
+      if(thisWidget.value !== newValue && !isNaN(newValue) && (newValue >= settings.amountWidget.defaultMin) && (newValue <= settings.amountWidget.defaultMax)){
         thisWidget.value = newValue;
-      }
-      if (thisWidget.value < minValue) {
-        thisWidget.value = minValue;
-      }
-      if (thisWidget.value > maxValue) {
-        thisWidget.value = maxValue;
       }
 
       thisWidget.input.value = thisWidget.value;
