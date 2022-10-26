@@ -484,9 +484,12 @@
         totalPrice: thisCart.totalPrice,
         subtotalPrice: thisCart.subtotalPrice,
         totalNumber: thisCart.totalNumber,
-        deliveryFee: thisCart.dom.deliveryFee,
+        deliveryFee: thisCart.deliveryFee,
         products: [],
       };
+      console.log('payload:', payload);
+
+
       for(let prod of thisCart.products) {
         payload.products.push(prod.getData());
       }
